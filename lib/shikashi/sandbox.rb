@@ -451,15 +451,15 @@ private
             end
 
             self.privileges[source] = privileges_
-            code = "nil;\n " + code
-
-            unless no_base_namespace
-              if (eval(base_namespace.to_s).instance_of? Module)
-                code = "module #{base_namespace}\n #{code}\n end\n"
-              else
-                code = "class #{base_namespace}\n #{code}\n end\n"
-              end
-            end
+            # code = "nil;\n " + code
+            # 
+            # unless no_base_namespace
+            #   if (eval(base_namespace.to_s).instance_of? Module)
+            #     code = "module #{base_namespace}\n #{code}\n end\n"
+            #   else
+            #     code = "class #{base_namespace}\n #{code}\n end\n"
+            #   end
+            # end
 
             hook_handler.evalhook(code, binding_, source)
           end
