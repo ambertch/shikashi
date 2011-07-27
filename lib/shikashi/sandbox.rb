@@ -459,10 +459,7 @@ private
             #   else
             #     code = "class #{base_namespace}\n #{code}\n end\n"
             #   end
-            # end
-            
-            puts "&"*100
-
+            # end        
             hook_handler.evalhook(code, binding_, source)
           end
         rescue ::Timeout::Error
