@@ -3,7 +3,6 @@ require File.expand_path("../lib/shikashi", __FILE__)
 Gem::Specification.new do |gem|
   gem.name    = 'shikashi'
   gem.version = '0.5.0'
-  gem.date    =  'June 20, 2011'
 
   gem.summary = "shikashi is a ruby sandbox that permits the execution of 'unprivileged' scripts by defining the permitted methods and constants the scripts can invoke with a white list logic"
   gem.description = ""
