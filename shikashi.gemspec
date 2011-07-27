@@ -1,4 +1,4 @@
-require File.expand_path("../lib/shikashi", __FILE__)
+# require File.expand_path("../lib/shikashi", __FILE__)
 
 Gem::Specification.new do |gem|
   gem.name    = 'shikashi'
@@ -12,7 +12,9 @@ Gem::Specification.new do |gem|
   gem.homepage = 'http://tario.github.com/shikashi/'
 
   gem.add_dependency('rake')
+  gem.add_dependency('evalhook')
+  gem.add_dependency('getsource')
 
   # ensure the gem is built out of versioned files
-  gem.files = Dir['Rakefile', '{lib,examples,spec}/**/*', 'README', 'LICENSE'] & `git ls-files -z`.split("\0")
+  gem.files = Dir['Rakefile', '{lib,examples,spec}/**/*', 'README', 'LICENSE']
 end
