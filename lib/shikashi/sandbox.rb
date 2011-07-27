@@ -460,6 +460,8 @@ private
             #     code = "class #{base_namespace}\n #{code}\n end\n"
             #   end
             # end
+            
+            puts "&"*100
 
             hook_handler.evalhook(code, binding_, source)
           end
